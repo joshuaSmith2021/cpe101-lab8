@@ -1,3 +1,7 @@
+# Name: Joshua Smith
+# Section: 07
+
+
 # Purpose: Read hidden.ppm
 def open_file() -> list:
     with open('hidden.ppm') as f:
@@ -9,9 +13,15 @@ def get_triples(lines: list) -> list:
     return [lines[3 * i: 3 * (i + 1)] for i in range(1, len(lines) // 3)]
 
 
+# Purpose: Change number * 10 but below 255
+def change(num):
+    new = num * 10
+    return new if new < 255 else 255
+
+
 # Purpose: Modify triples to r *= 10 and every element is r
 def modify_lines(triples: list) -> list:
-    return [[int(x[0]) * 3] * 3 for x in triples]
+    return [[change(int(x[0]))] * 3 for x in triples]
 
 
 # Purpose: Call functions

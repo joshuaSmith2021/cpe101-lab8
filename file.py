@@ -1,3 +1,7 @@
+# Name: Joshua Smith
+# Section: 07
+
+
 # Purpose: Read in.txt and return lines as a list of strings
 def open_file() -> list:
     with open('in.txt') as f:

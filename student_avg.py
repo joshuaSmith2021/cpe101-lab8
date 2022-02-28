@@ -1,3 +1,7 @@
+# Name: Joshua Smith
+# Section: 07
+
+
 class Student:
     '''Represents a student.
     '''
